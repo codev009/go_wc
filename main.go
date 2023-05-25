@@ -22,4 +22,14 @@ func count(r io.Reader) int {
 
   // Defining a counter
   wc := 0
+
+  // For every word count, increment the counter
+
+  for scanner.Scan() {
+    wc++
+  }
+
+  // Return the total
+  return wc
 }
+
